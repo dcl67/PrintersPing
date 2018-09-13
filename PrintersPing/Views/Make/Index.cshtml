@@ -1,0 +1,33 @@
+﻿@model IEnumerable<PrintersPing.Models.Make>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Printer_Make)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Printer_Make)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Make_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Make_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Make_id })
+        </td>
+    </tr>
+}
+
+</table>

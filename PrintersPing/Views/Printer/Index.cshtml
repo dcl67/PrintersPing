@@ -1,0 +1,105 @@
+﻿@model IEnumerable<PrintersPing.Models.Printer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Printer_Location.Printer_Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Printer_Make.Printer_Make)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Printer_Model.Printer_Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Printer_Status.Printer_Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Printer_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VLAN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ink_or_Toner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Warning)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Serial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAC_Address)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Printer_Location.Printer_Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Printer_Make.Printer_Make)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Printer_Model.Printer_Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Printer_Status.Printer_Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Printer_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VLAN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ink_or_Toner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Warning)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Serial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAC_Address)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

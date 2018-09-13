@@ -1,0 +1,26 @@
+﻿@model PrintersPing.Models.Model
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Model</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Printer_Model)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Printer_Model)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Model_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
